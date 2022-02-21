@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-                echo 'Helldddddddhgjhgjhdddbjkddhesfsfsfsllodddddddddddddo world!' 
+                echo 'Helldddddddhgjhgjhddddo world!' 
             }
         }
         stage('Setting the variables values') {
