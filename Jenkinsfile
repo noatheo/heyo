@@ -10,6 +10,7 @@ pipeline {
     steps {
          sh '''#!/bin/bash
                  echo "hello world" 
+                 python3 pyth.py
          '''
     }
 }
