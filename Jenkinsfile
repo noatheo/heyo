@@ -9,8 +9,8 @@ pipeline {
         stage('Setting the variables values') {
     steps {
          sh '''#!/bin/bash
-                 echo "hello world" 
-                 python3 pyth.py
+                 docker build -t hayo ./do
+                 docker run hayo
          '''
     }
 }
