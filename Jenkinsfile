@@ -10,7 +10,7 @@ pipeline {
     steps {
          sh '''#!/bin/bash
                  docker build -t hayo ./do
-                 docker run hayo
+                 ddocker run -it -p 8000:8000 hayo
          '''
     }
 }
