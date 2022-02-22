@@ -9,7 +9,7 @@ pipeline {
         stage('STage 2') {
     steps {
          sh '''#!/bin/bash
-                 docker-compose up
+                 docker-compose up .
          '''
     }
 }
