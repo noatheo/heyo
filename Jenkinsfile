@@ -6,11 +6,10 @@ pipeline {
                 echo 'Helldddddddhgjhgfdsfjhddddo world!' 
             }
         }
-        stage('Setting the variables values') {
+        stage('STage 2') {
     steps {
          sh '''#!/bin/bash
-                 docker build -t hayo ./do
-                 docker run -it -p 2000:2000 hayo
+                 docker-compose up
          '''
     }
 }
