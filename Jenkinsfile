@@ -10,7 +10,7 @@ pipeline {
     steps {
          sh '''#!/bin/bash
                  cd ./do
-                 docker-compose up -d
+                 docker-compose up -d --build
          '''
     }
 }
