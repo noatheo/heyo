@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  Change the configuration of the deployment:
+  Change_the_configuration_of_the_deployment:
     runs-on: ubuntu-latest
     if: ${{ github.ref_name == 'feature-/*' }}
     steps:
