@@ -7,7 +7,7 @@ on:
 jobs:
   normal_ci:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'feature-/*' }}
+    if: ${{ github.ref_name == 'main' }}
     steps:
       - uses: actions/checkout@v3
       - name: Run normal CI
