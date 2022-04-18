@@ -1,19 +1,12 @@
-name: Testing the github action workflow
+name: Run CI
+on: [push, pull_request]
 
-on: [push]
 jobs:
-  
-  Explore-Github-Actions:
+  normal_ci:
     runs-on: ubuntu-latest
+    if: ${{ github.ref_name == 'feature-/*' }}
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - run: git branch 
-  
-  destroy:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "git branche"
-
-  
+      - uses: actions/checkout@v3
+      - name: Run normal CI
+        run: echo "Hello from other side"
 
