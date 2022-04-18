@@ -1,0 +1,15 @@
+name: Auto Deployment for Feature Branches
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  Change the configuration of the deployment:
+  runs-on: ubuntu-latest
+    if: ${{ github.ref_name == 'feature-/*' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run PR CI
+        run: echo "hello world"
