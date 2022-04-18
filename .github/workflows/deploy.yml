@@ -1,20 +1,22 @@
 name: Testing the github action workflow
 
-on: [push]
+on: 
+  push:[*]
+
+
 jobs:
   
-  Explore-Github-Actions:
+  Checks a new feature is deployed:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+
+    - name: 
+
     - run: |
           git branch
   
-  destroy:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "git dddddddddddddddddbranche"
-
+  
   
 
