@@ -6,7 +6,7 @@ jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
     steps:
-    - run: git branche 
+    - run: git branch 
   
   destroy:
     runs-on: ubuntu-latest
