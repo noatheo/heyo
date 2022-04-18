@@ -1,0 +1,17 @@
+name: Testing the github action workflow
+
+on: [push]
+jobs:
+  
+  Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
+    - run: git branches 
+  
+  destroy:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "git branches"
+
+  
+
