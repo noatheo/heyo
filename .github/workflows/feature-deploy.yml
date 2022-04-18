@@ -8,7 +8,7 @@ on:
 jobs:
   Change_the_configuration_of_the_deployment:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'feature-mr' }}
+    if: ${{ github.ref_name == 'feature-/**' }}
     steps:
       - uses: actions/checkout@v3
       - name: Run PR CI
