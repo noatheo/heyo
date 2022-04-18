@@ -1,8 +1,9 @@
 name: Testing the github action workflow
 
 on: 
-  push: [*]
-
+  push: 
+    branches:
+      - '*' 
 
 jobs:
   
