@@ -9,7 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - run: |
-          git branch |grep "hello"
+          git branch | grep "dev"
   
   destroy:
     runs-on: ubuntu-latest
