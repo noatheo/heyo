@@ -1,6 +1,7 @@
 name: Run CI
 on:
   push:
+    - '**'
 
 jobs:
   normal_ci:
