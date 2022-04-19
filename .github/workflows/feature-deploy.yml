@@ -39,4 +39,6 @@ jobs:
       MY_SECRET: ${{ secrets.MY_SECRET }}
     steps:
       - name: hhhhh
-        run: echo $MY_SECRET
+        run: |
+         $MY_SECRET >> fr.txt
+         cat fr.txt
