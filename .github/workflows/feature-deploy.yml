@@ -23,11 +23,7 @@ jobs:
      - if: ${{env.MY_SECRET}}
        run: echo "I have the heyo secret"
 
-  checking_if_github actions_can_pass_parameters:
-    runs-on: ubuntu-latest
-    env:
-        MY_SS: ${{secrets.MY_SECRETS}}
-
+ 
   checking_if_github_seceret can be create:
     runs-on: ubuntu-latest
     - uses: gliech/create-github-secret-action@v1
