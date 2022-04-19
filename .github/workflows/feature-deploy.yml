@@ -21,4 +21,4 @@ jobs:
       MY_SECRET: ${{ secrets.MY_SECRET }}
     steps:
      - if: ${{env.MY_SECRET}}
-       run: echo "I have the secret"
+       run: echo "I have the heyo secret"
