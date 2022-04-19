@@ -15,5 +15,5 @@ jobs:
       - name: Run PR CI
         run: echo "hello world"
       - name: Check if A secert exist
-        if: ${{hasSecert("HELLO")=='true' or containsSecert("HELLO") == 'true' or secertExists('HELLO') == 'true'}}
+        if: ${{hasSecret("HELLO")=='true' or containsSecret("HELLO") == 'true' or secretExists('HELLO') == 'true'}}
         run: echo "Hello goodmorning"
