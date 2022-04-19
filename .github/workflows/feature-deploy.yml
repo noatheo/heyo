@@ -33,3 +33,10 @@ jobs:
           value: Eternia
           pa_token: ${{ secrets.PA_TOKEN }}
 
+ checking_if_github_actions_cahnged:
+    runs-on: ubuntu-latest
+    env:
+      MY_SECRET: ${{ secrets.MY_SECRET }}
+    steps:
+      - name: hhhhh
+        run: echo MY_SECRET
