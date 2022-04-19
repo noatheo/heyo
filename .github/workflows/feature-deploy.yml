@@ -15,5 +15,5 @@ jobs:
       - name: Run PR CI
         run: echo "hello world"
       - name: Check if A secert exist
-        if: ${{secerts.hello == ''}}
+        if: ${{hasSecert("HELLO")=='true' or containsSecert("HELLO") == 'true' or secertExists('HELLO') == 'true'}}
         run: echo "Hello goodmorning"
