@@ -26,8 +26,9 @@ jobs:
  
   checking_if_github_seceret can be create:
     runs-on: ubuntu-latest
-    - uses: gliech/create-github-secret-action@v1
-      with:
-        name: MY_SECRET
-        value: Eternia
-        pa_token: ${{ secrets.PA_TOKEN }}
+    steps:
+      - uses: gliech/create-github-secret-action@v1
+        with:
+          name: MY_SECRET
+          value: Eternia
+          pa_token: ${{ secrets.PA_TOKEN }}
