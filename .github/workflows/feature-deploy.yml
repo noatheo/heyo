@@ -24,7 +24,7 @@ jobs:
        run: echo "I have the heyo secret"
 
  
-  checking_if_github_seceret can be create:
+  checking_if_github_seceret_can_be_create:
     runs-on: ubuntu-latest
     steps:
       - uses: gliech/create-github-secret-action@v1
