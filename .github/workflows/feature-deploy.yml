@@ -16,4 +16,4 @@ jobs:
         run: echo "hello world"
       - name: Check if A secert exist
         if: ${{secerts.hello == ''}}
-        run: ech "Hello goodmorning"
+        run: echo "Hello goodmorning"
