@@ -14,6 +14,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run PR CI
         run: echo "hello world"
-      - name: Check if A secert exist
-        if: ${{hasSecret("HELLO")=='true' or containsSecret("HELLO") == 'true' or secretExists('HELLO') == 'true'}}
-        run: echo "Hello goodmorning"
+  
+  Checking_a_Secert_Exist:
+    runs-on: ubuntu-latest
+    env:
+      MY_SECERT: ${{ secerts.MY_SECRET }}
+    steps:
+     - if: ${{env.MY_SECRET}}
+       run: echo "I have the secret"
