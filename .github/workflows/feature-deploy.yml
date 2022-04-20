@@ -12,33 +12,11 @@ jobs:
    # if: ${{ github.ref_name == 'feature-' }}
     steps:
       - uses: actions/checkout@v3
-      - name: Run PR CI
-        run: echo "hello world"
+      
+      name: Check_the_G.C.P._Metadata
+      - uses: 'google-github-actions/setup-gcloud@v0' 
+      - run: |
+                gsutil ls -L -b gs://mytesthtml
+                      
+
   
-  Checking_a_Secert_Exist:
-    runs-on: ubuntu-latest
-    env:
-      MY_SECRET: ${{ secrets.MY_SECRET }}
-    steps:
-     - if: ${{env.MY_SECRET}}
-       run: echo "I have the heyo secret"
-
- 
-  checking_if_github_seceret_can_be_create:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: gliech/create-github-secret-action@v1
-        with:
-          name: MY_SECRET
-          value: Eternia
-          pa_token: ${{ secrets.PA_TOKEN }}
-
-  checking_if_github_actions_cahnged:
-    runs-on: ubuntu-latest
-    env:
-      MY_SECRET: ${{ secrets.MY_SECRET }}
-    steps:
-      - name: hhhhh
-        run: |
-         $MY_SECRET >> fr.txt
-         cat fr.txt
