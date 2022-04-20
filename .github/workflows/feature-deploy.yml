@@ -11,12 +11,12 @@ jobs:
     if: contains(github.ref_name,'feature-' )
    # if: ${{ github.ref_name == 'feature-' }}
     steps:
-      - uses: actions/checkout@v3
+      uses: actions/checkout@v3
       
       name: Check_the_G.C.P._Metadata
-      - uses: 'google-github-actions/setup-gcloud@v0' 
-      - run: |
-                gsutil ls -L -b gs://mytesthtml
-                      
+        - uses: 'google-github-actions/setup-gcloud@v0' 
+        - run: |
+              gsutil ls -L -b gs://mytesthtml
+                        
 
   
