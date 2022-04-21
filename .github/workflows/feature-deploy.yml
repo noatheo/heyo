@@ -5,6 +5,9 @@ on:
     branches:
       - '**'
 
+env:
+  HELL: "hekk"
+
 jobs:
   Check_Branch_Metadata_and_Configure_Environment_Variable:
     runs-on: ubuntu-latest
@@ -26,7 +29,7 @@ jobs:
 
         name: Check If A Bucket Exists
       
-      - if: (${{contains(github.ref_name,'feature-')}} == true)
+      - if: env.hekk != "hekk"
         name: test for github actions
         run: echo "it worked"   
                     
