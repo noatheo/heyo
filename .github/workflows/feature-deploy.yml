@@ -17,14 +17,14 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v0
         name:  Install Google Cloud Sdk
       
-        uses: google-github-actions/auth@v0
+      - uses: google-github-actions/auth@v0
         with:
           credentials_json: ${{ secrets.GCS_KEY }}
         name: Authentication
 
       - run: |
           gsutil ls gs://mytesthtml
-          
+
         name: Check If A Bucket Exists
        
                         
