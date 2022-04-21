@@ -1,44 +1,26 @@
-name: Auto Deployment for Feature Branches
+name: Feature G.C.P. Infrastructure Build
 
 on:
   push:
     branches:
       - '**'
+env:
+  AREYOUNEW: ${{ secrets.AREYOUNEW != '' }}
 
 jobs:
-  Change_the_configuration_of_the_deployment:
+
+  CHECKING_BRANCH_METADATA:
     runs-on: ubuntu-latest
     if: contains(github.ref_name,'feature-' )
-   # if: ${{ github.ref_name == 'feature-' }}
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run PR CI
-        run: echo "hello world"
-  
-  Checking_a_Secert_Exist:
-    runs-on: ubuntu-latest
-    env:
-      MY_SECRET: ${{ secrets.MY_SECRET }}
-    steps:
-     - if: ${{env.MY_SECRET}}
-       run: echo "I have the heyo secret"
 
- 
-  checking_if_github_seceret_can_be_create:
-    runs-on: ubuntu-latest
     steps:
-      - uses: gliech/create-github-secret-action@v1
-        with:
-          name: MY_SECRET
-          value: Eternia
-          pa_token: ${{ secrets.PA_TOKEN }}
 
-  checking_if_github_actions_cahnged:
-    runs-on: ubuntu-latest
-    env:
-      MY_SECRET: ${{ secrets.MY_SECRET }}
-    steps:
-      - name: hhhhh
-        run: |
-         $MY_SECRET >> fr.txt
-         cat fr.txt
+      name:Check_If_Branch_Has_Secret
+      if: ${{ env.HAVE_SONAR_TOKEN == 'false' }}
+      uses: gliech/create-github-secret-action@v1
+      with:
+        name: (github.ref_name)
+        value: DeployCode
+        pa_token: ${{ secrets.PA_TOKEN }}
+      name:Say hello
+      run: echo "Hello morning"
