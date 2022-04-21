@@ -23,8 +23,8 @@ jobs:
         name: Authentication
 
       - run: |
-          gsutil ls gs://mytesthtmlhjjfdkjfjhdkjjkddsjkjkjjkjkjk
-        
+
         name: Check If A Bucket Exists
        
-                        
+      - name: Say hello
+        run: echo "hello"               
