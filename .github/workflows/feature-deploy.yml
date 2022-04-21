@@ -1,26 +1,20 @@
-name: Feature G.C.P. Infrastructure Build
+name: Auto Deployment for Feature Branches
 
 on:
   push:
     branches:
       - '**'
-env:
-  AREYOUNEW: ${{ secrets.AREYOUNEW != '' }}
 
 jobs:
-
-  CHECKING_BRANCH_METADATA:
+  Check_Branch_Metadata_and_Configure_Environment_Variable:
     runs-on: ubuntu-latest
     if: contains(github.ref_name,'feature-' )
-
+   
     steps:
-
-      name:Check_If_Branch_Has_Secret
-      if: ${{ env.HAVE_SONAR_TOKEN == 'false' }}
-      uses: gliech/create-github-secret-action@v1
-      with:
-        name: (github.ref_name)
-        value: DeployCode
-        pa_token: ${{ secrets.PA_TOKEN }}
-      name:Say hello
-      run: echo "Hello morning"
+      - uses: actions/checkout@v3
+      
+        name: Check_the_G.C.P._Metadata
+      - uses: 'google-github-actions/setup-gcloud@v0' 
+      - run: echo "Hello World"
+            
+                        
