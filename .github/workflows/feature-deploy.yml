@@ -21,12 +21,6 @@ jobs:
           gsutil ls gs://mytesthtml
         name: Check If A Bucket Exists
 
-      - env:
-          BRANCH_NAME: ${{github.ref_name}}
-          BUCKET: at-"portal-name"-"feature name"
-          LOADBALANCER: at-"portal name"-"feature name"-cdn
-          BACKEND_BUCKET: at-"feature name"-backend
-          FRONTEND_NAME: at-"feature name"-frontend 
-
+     
        
                         
