@@ -25,6 +25,8 @@ jobs:
       - run: |
 
         name: Check If A Bucket Exists
-       
-      - name: Say hello
-        run: echo "hello"               
+      
+      - if: !contains(github.ref_name,'feature-')
+        name: test for github actions
+        run: echo "it worked"   
+                    
