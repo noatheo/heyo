@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '**'
+        if: contains(github.ref_name,'feature-' )
+
 
 env:
   HELL: "hekk"
@@ -11,7 +13,7 @@ env:
 jobs:
   Build_The_Infrastructure :
     runs-on: ubuntu-latest
-    if: contains(github.ref_name,'feature-' )
+    
    
     steps:
 
