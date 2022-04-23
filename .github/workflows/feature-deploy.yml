@@ -3,8 +3,8 @@ name: Auto Deployment for Feature Branches
 on:
   push:
     branches:
-      - '**'
-        if: contains(github.ref_name,'feature-' )
+        - if: contains(github.ref_name,'feature-' )
+          '**'
 
 
 env:
