@@ -7,7 +7,7 @@ on:
 
 
 env:
-  HELL: "hekk"
+  HELL: "hegkk"
 
 jobs:
   Build_The_Infrastructure :
