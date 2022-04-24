@@ -3,7 +3,7 @@ name: Auto Deployment for Feature Branches
 on:
   push:
     branches:
-      - "feature-/*"
+      - 'feature-/**'
 
 env:
   HELL: "hekk"
