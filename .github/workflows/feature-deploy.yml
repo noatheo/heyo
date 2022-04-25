@@ -37,7 +37,7 @@ jobs:
           G.C.S._BUCKET='hello'
 
 
-    Deploy_to_G.C.P:
+    Deploy_to_GCP:
       runs-on: ubuntu-latest
       steps:
 
