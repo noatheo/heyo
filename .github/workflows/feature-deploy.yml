@@ -35,6 +35,7 @@ jobs:
       - name: Testing_Envi_Variables
         run: |
           GCS_BUCKET='hello'
+          echo $GCS_BUCKET
 
 
   Deploy_to_GCP:
