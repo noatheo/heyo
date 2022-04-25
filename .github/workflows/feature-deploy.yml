@@ -6,13 +6,14 @@ on:
       'feature-**'
 
 env:
-  HELL: "hekk"
+  G.C.S._BUCKET:
+#  G.C.P._LOADBALANCER:
+#  G.C.P._BACKEND_BUCKET:
+#  G.C.P._LOADBALANCER_STATIC_IP:
 
 jobs:
-  Build_The_Infrastructure :
+  Build_The_Infrastructure:
     runs-on: ubuntu-latest
-    
-   
     steps:
 
       - name:  Install Google Cloud Sdk
@@ -23,11 +24,24 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCS_KEY }}
 
-      - name: Check If A Static Website and a Bucket Exists
+      - name:  Bucket Exists
         run: |
-          gsutil ls -L -b gs://mytesthtml
+          gsutil ls | grep ""
 
       - name: test for github actions
         if: ${{env.HELL != 'hekk'}}
         run: echo "it worked"   
+
+      - name: Testing_Envi_Variables
+        run: |
+          G.C.S._BUCKET='hello'
+
+
+    Deploy_to_G.C.P:
+      runs-on: ubuntu-latest
+      steps:
+
+        - name: testing
+          run: echo $G.C.S._BUCKET
+
                     
