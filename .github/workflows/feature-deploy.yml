@@ -35,6 +35,8 @@ jobs:
           GCS_BUCKET='hello'
           echo $GCS_BUCKET
           export GCS_BUCKET='hey man'
+          echo $GCS_BUCKET
+
 
 
   Deploy_to_GCP:
