@@ -24,9 +24,6 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCS_KEY }}
 
-      - name:  Bucket Exists
-        run: |
-          gsutil ls | grep ""
 
       - name: test for github actions
         if: ${{env.HELL != 'hekk'}}
@@ -37,6 +34,7 @@ jobs:
           echo $GCS_BUCKET
           GCS_BUCKET='hello'
           echo $GCS_BUCKET
+          export GCS_BUCKET='hey man'
 
 
   Deploy_to_GCP:
