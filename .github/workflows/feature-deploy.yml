@@ -6,7 +6,7 @@ on:
       'feature-**'
 
 env:
-  G.C.S._BUCKET:
+  GCS_BUCKET:
 #  G.C.P._LOADBALANCER:
 #  G.C.P._BACKEND_BUCKET:
 #  G.C.P._LOADBALANCER_STATIC_IP:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Testing_Envi_Variables
         run: |
-          G.C.S._BUCKET='hello'
+          GCS_BUCKET='hello'
 
 
   Deploy_to_GCP:
@@ -42,6 +42,6 @@ jobs:
     steps:
 
       - name: testing
-        run: echo $G.C.S._BUCKET
+        run: echo $GCS_BUCKET
 
                     
