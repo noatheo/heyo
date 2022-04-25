@@ -37,11 +37,11 @@ jobs:
           G.C.S._BUCKET='hello'
 
 
-    Deploy_to_GCP:
-      runs-on: ubuntu-latest
-      steps:
+  Deploy_to_GCP:
+    runs-on: ubuntu-latest
+    steps:
 
-        - name: testing
-          run: echo $G.C.S._BUCKET
+      - name: testing
+        run: echo $G.C.S._BUCKET
 
                     
