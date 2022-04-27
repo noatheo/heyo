@@ -47,7 +47,7 @@ jobs:
         run: |
           
           ls 
-          gcloud config list 
+          gcloud config set pass_credentials_to_gsutil true
           gsutil ls
           echo "it worked"
 
