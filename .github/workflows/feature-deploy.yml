@@ -42,11 +42,11 @@ jobs:
           echo $GCS_BUCKET
       
       - name: Testing uploading
-        working-directory: ./do
+        
         run: |
           touch main.txt
           ls -a
-              gsutil -m rsync -R dsds gs://mytesthtml
+              gsutil -m rsync -R .heyo/do gs://mytesthtml
 
 
 
