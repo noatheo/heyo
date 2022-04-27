@@ -39,9 +39,6 @@ jobs:
       
       - name: Testing uploading
         run: |
-          mkdir do
-          cd do
-          touch kk.txt
           gsutil -m rsync -R output gs://mytesthtml/
 
 
