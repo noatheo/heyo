@@ -44,9 +44,9 @@ jobs:
       - name: Testing uploading
         
         run: |
-          touch main.txt
-          ls -a
-              gsutil -m rsync -R ./heyo/do gs://mytesthtml
+          cd ${{GITHUB_WORKSPACE}}/heyo
+          
+             
 
 
 
