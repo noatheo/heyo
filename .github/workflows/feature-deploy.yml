@@ -48,6 +48,7 @@ jobs:
           
           ls 
           gcloud config list 
+          gsutil ls
           echo "it worked"
 
           
