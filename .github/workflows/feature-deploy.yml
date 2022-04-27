@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: testing
+      - name: testidng
         run: echo $GCS_BUCKET
 
                     
