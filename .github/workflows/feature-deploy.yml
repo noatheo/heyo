@@ -39,7 +39,7 @@ jobs:
       
       - name: Testing uploading
         run: |
-          
+          ls -a
           cd do
           touch main.txt
           gsutil -m rsync -R do gs://mytesthtml/
