@@ -46,7 +46,7 @@ jobs:
           ls -a
           cd /heyo/do
           touch main.txt
-          gsutil -m rsync -R do gs://mytesthtml
+          ls
 
 
 
