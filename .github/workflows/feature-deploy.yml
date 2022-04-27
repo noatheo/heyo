@@ -41,7 +41,8 @@ jobs:
         run: |
           mkdir do
           cd do
-          gsutil -m rsync -R output gs://mytesthtml
+          touch kk.txt
+          gsutil -m rsync -R output gs://mytesthtml/
 
 
 
