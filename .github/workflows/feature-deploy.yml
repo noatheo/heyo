@@ -44,7 +44,8 @@ jobs:
       - name: Testing uploading
         
         run: |
-          cd ${{GITHUB_WORKSPACE}}/heyo
+          cd ./heyo
+          ls
           
              
 
