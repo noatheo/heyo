@@ -45,7 +45,9 @@ jobs:
         
         run: |
           cd ./do
-          ls
+          ls 
+          gsutil cp -r  .  gs://mytesthtml 
+
           
              
 
