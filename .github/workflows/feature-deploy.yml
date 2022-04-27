@@ -48,7 +48,7 @@ jobs:
           
           ls 
           gcloud config list
-         # gsutil cp -r  ./do  gs://mytesthtml 
+#         gsutil cp -r  ./do  gs://mytesthtml 
           echo "it worked"
 
           
