@@ -42,10 +42,10 @@ jobs:
           echo $GCS_BUCKET
       
       - name: Testing uploading
+        working-directory: ./do
         run: |
-          ls -a
-          cd /heyo/do
           touch main.txt
+          ls -a
           ls
 
 
