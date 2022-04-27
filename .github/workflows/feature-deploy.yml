@@ -27,6 +27,7 @@ jobs:
         uses: google-github-actions/auth@v0
         with:
           credentials_json: ${{ secrets.GCS }}
+          project_id: mytest-121212
 
 
       - name: test for github actions
@@ -46,7 +47,7 @@ jobs:
         run: |
           
           ls 
-          gcloud --quiet auth application-default login 
+         
           gsutil cp -r  ./do  gs://mytesthtml 
           echo "it worked"
 
