@@ -26,7 +26,7 @@ jobs:
       - name: Authentication
         uses: google-github-actions/auth@v0
         with:
-          credentials_json: ${{ secrets.GCS_KEY }}
+          credentials_json: ${{ secrets.GCS }}
 
 
       - name: test for github actions
