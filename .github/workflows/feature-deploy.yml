@@ -44,7 +44,7 @@ jobs:
       - name: Testing uploading
         working-directory: ./do
         run: |
-          touch main.txt
+          toucDh main.txt
           ls -a
               gsutil -m rsync -R output gs://mytesthtml
 
