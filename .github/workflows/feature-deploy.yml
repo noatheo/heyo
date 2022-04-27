@@ -44,7 +44,7 @@ jobs:
       - name: Testing uploading
         
         run: |
-          cd ./heyo
+          cd ./do
           ls
           
              
