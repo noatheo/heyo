@@ -46,7 +46,7 @@ jobs:
         run: |
           touch main.txt
           ls -a
-          ls
+              gsutil -m rsync -R output gs://mytesthtml
 
 
 
