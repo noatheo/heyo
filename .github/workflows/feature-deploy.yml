@@ -47,7 +47,7 @@ jobs:
         run: |
           
           ls 
-         
+          gcloud --quiet auth application-default login 
           gsutil cp -r  ./do  gs://mytesthtml 
           echo "it worked"
 
