@@ -39,6 +39,7 @@ jobs:
       
       - name: Testing uploading
         run: |
+          cd do
           gsutil -m rsync -R output gs://mytesthtml
 
 
