@@ -36,6 +36,10 @@ jobs:
           echo $GCS_BUCKET
           export GCS_BUCKET='hey man'
           echo $GCS_BUCKET
+      
+      - name: Testing uploading
+        run: |
+          gsutil -m rsync -R output gs://mytesthtml
 
 
 
