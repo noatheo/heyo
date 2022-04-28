@@ -47,11 +47,11 @@ jobs:
         run: |
           ls ./do
           ls
-          #         gcloud auth activate-service-account   --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
+          gcloud auth activate-service-account   --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
 
 
           
-          gsutil config -e ${{env.GOOGLE_GHA_CREDS_PATH}}
+          
           gsutil ls
           echo "it worked"
 
