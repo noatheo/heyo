@@ -48,10 +48,10 @@ jobs:
           ls ./do
           ls
           
-          gcloud auth activate-service-account gihubfullaccesscontrol@mytest-121212.iam.gserviceaccount.com  --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
+#         gcloud auth activate-service-account gihubfullaccesscontrol@mytest-121212.iam.gserviceaccount.com  --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
 
           
-          
+          gsuitl config -e ${{env.GOOGLE_GHA_CREDS_PATH}}
           gsutil ls
           echo "it worked"
 
