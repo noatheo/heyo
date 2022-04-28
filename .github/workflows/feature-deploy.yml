@@ -45,12 +45,13 @@ jobs:
       - name: Testing uploading
         
         run: |
-          ls
-          gcloud auth activate-service-account gihubfullaccesscontrol@mytest-121212.iam.gserviceaccount.com  --key-file= do/mytest-121212-f8e96f999d96.json --project=mytest-121212
+          ls ./do
+          
+          gcloud auth activate-service-account gihubfullaccesscontrol@mytest-121212.iam.gserviceaccount.com  --key-file=./do/mytest-121212-f8e96f999d96.json --project=mytest-121212
 
           
           
-          gsutil ls
+          gsutil 
           echo "it worked"
 
           
