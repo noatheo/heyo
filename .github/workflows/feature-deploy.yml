@@ -46,8 +46,9 @@ jobs:
         
         run: |
           ls ./do
+          ls
           
-          gcloud auth login -yes
+          gcloud auth activate-service-account gihubfullaccesscontrol@mytest-121212.iam.gserviceaccount.com  --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
 
           
           
