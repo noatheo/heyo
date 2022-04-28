@@ -47,7 +47,7 @@ jobs:
         run: |
           ls ./do
           ls
-          
+          #         gcloud auth activate-service-account   --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
 
 
           
