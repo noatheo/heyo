@@ -51,7 +51,7 @@ jobs:
 
 
           
-          gsuitl config -e ${{env.GOOGLE_GHA_CREDS_PATH}}
+          gsutil config -e ${{env.GOOGLE_GHA_CREDS_PATH}}
           gsutil ls
           echo "it worked"
 
