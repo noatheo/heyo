@@ -6,7 +6,7 @@ on:
       'feature-**'
 
 env:
-  GCS_BUCKET: 'heee'
+  GCS_BUCKET: 'gs://mytesthtml'
 #  G.C.P._LOADBALANCER:
 #  G.C.P._BACKEND_BUCKET:
 #  G.C.P._LOADBALANCER_STATIC_IP:
@@ -42,18 +42,15 @@ jobs:
           export GCS_BUCKET='hey man'
           echo $GCS_BUCKET
       
-      - name: Testing uploading
-        
-        run: |
-          ls ./do
-          ls
-          gcloud auth activate-service-account   --key-file=${{env.GOOGLE_GHA_CREDS_PATH}} --project=mytest-121212
+     
 
 
-          
-          
-          gsutil ls
-          echo "it worked"
+      - name: 'upload-files'
+        uses: 'google-github-actions/upload-cloud-storage@v0'
+        with:
+          path: 'do'
+          destination: gs://mytesthtml
+          parent: false
 
           
              
