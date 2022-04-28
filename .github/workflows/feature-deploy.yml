@@ -51,7 +51,7 @@ jobs:
 
           
           
-          gsutil 
+          gsutil ls
           echo "it worked"
 
           
