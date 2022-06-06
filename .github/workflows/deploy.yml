@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing
-      - run: echo "hello"
-      - run: echo "goodbye"
+        run: echo "hello"
+        run: echo "goodbye"
 
