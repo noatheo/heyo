@@ -12,4 +12,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run normal CI
         run: echo "Hello from other side"
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+      - run: echo "hello"
+      - run: echo "goodbye"
 
